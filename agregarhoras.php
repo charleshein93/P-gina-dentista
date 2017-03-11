@@ -55,7 +55,7 @@ $resulta=mysqli_query($link,$query4);
                 </nav>
                 </header>
         <div id="ahoras">
-             <form action="" method="post" name="frm" class="uno">
+             <form action="" method="post" name="frm">
                  
           <ul>
                 <li>Fecha <input type="date" name="fecha"  required></li>
@@ -88,11 +88,12 @@ $resulta=mysqli_query($link,$query4);
         <?php
          while ( $row = $resulta->fetch_array() ):
             ?>
-            <tr>        
-            <td><?php echo $row[0]; ?> </td>
+            <tr>
+
             <td><?php echo $row[1]; ?> </td>
+            <td><?php echo $row[2]; ?> </td>
        
-            <td><input type="checkbox"  name="id[]" value="<?php echo $row[2] ?>" /></td>
+            <td><input type="checkbox"  name="id[]" value="<?php echo $row[0] ?>" /></td>
             </tr>
        <?php endwhile; ?>
     </tbody>

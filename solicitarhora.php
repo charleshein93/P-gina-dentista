@@ -96,7 +96,7 @@ $link = mysqli_connect("localhost", "root", "","horas") or die("Error " . mysqli
                         <option  value="ninguno"> Ningun horario seleccionado</option>
                      <?php while ( $row = $resulta->fetch_array() ) { ?>
                          
-                        <option  value="<?php printf ("%s / %s\n", $row[0], $row[1]);?>"> <?php printf ("%s / %s\n", $row[0], $row[1]);?> </option>
+                        <option  value="<?php printf ("%s / %s\n", $row[1], $row[2]);?>"> <?php printf ("%s / %s\n", $row[1], $row[2]);?> </option>
                      <?php   }   ?>
                     </select></li>              
                 <li> <input type="submit" value="Solicitar" name="buscar" class="button" /></li>
